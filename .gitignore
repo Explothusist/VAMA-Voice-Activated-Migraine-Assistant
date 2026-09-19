@@ -1,0 +1,26 @@
+# For the server
+.vscode/sftp.json
+
+# Local environment files (secrets)
+.env
+.env.local
+.env.*.local
+
+app.log
+events.log
+
+# For the repo
+.DS_Store
+node_modules
+/build
+/.svelte-kit
+/package
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+# db/
+
+# In repo but not server
+#.npmrc
+#DEBUG_reset_database.bat
+#DEBUG_start_server.bat
+#Documentation.docx
