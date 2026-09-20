@@ -12,15 +12,15 @@
 <DarkListScreen
     title={"Assignments List"}
     subtitles={[
-        { entry: "Excessive Expostulation", size: 2 },
-        { entry: "Incentive Exposition", size: 2 },
-        { entry: "Expensive Exfoliation", size: 2 },
-        { entry: "Intensive Explanation", size: 2 },
+        { entry: "Excessive Expostulation", size: 2, href: "" },
+        { entry: "Incentive Exposition", size: 2, href: "" },
+        { entry: "Expensive Exfoliation", size: 2, href: "" },
+        { entry: "Intensive Explanation", size: 2, href: "" },
     ]}
     list_entries={[
         { title: "Read Menu", href: "" },
         { title: "View Assignment", href: "/assignments/1/" },
-        { title: "Return to Main", href: "/main/" },
+        { title: "Return to Main", href: "/" },
         { title: "Help", href: "" },
     ]}
 />

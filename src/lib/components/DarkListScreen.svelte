@@ -26,15 +26,17 @@
     </flex-cont>
     {#each subtitles as entry}
         <flex-cont>
-            {#if entry.size === 2}
-                <text-cont class="subtitle-text-2">
-                    {entry.entry}
-                </text-cont>
-            {:else if entry.size === 1}
-                <text-cont class="subtitle-text-1">
-                    {entry.entry}
-                </text-cont>
-            {/if}
+            <text-cont class:subtitle-text-2={entry.size === 2} class:subtitle-text-1={entry.size === 1}>
+                {#if entry.href !== ""}
+                    <a href={entry.href} class="button-cont list-text subtitle-inner" target="_self">
+                        {entry.entry}
+                    </a>
+                {:else}
+                    <not-a class="button-cont list-text subtitle-inner">
+                        {entry.entry}
+                    </not-a>
+                {/if}
+            </text-cont>
         </flex-cont>
     {/each}
 
@@ -45,9 +47,15 @@
             <!-- <button class="button-as-blank-box button-cont list-text">
                 {entry.title}
             </button> -->
-            <a href={entry.href} class="button-cont list-text" target="_self">
-                {entry.title}
-            </a>
+            {#if entry.href !== ""}
+                <a href={entry.href} class="button-cont list-text" target="_self">
+                    {entry.title}
+                </a>
+            {:else}
+                <not-a class="button-cont list-text">
+                    {entry.title}
+                </not-a>
+            {/if}
         </flex-cont>
     {/each}
 
@@ -129,6 +137,10 @@
     }
     .splitter {
         flex: 1 1 auto;
+    }
+
+    .subtitle-inner {
+        margin: 0px;
     }
 
 </style>

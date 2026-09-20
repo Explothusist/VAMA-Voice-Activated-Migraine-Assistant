@@ -12,19 +12,18 @@
 <DarkListScreen
     title={"Assignment: Excessive Expostulation"}
     subtitles={[
-        { entry: "AP Comp Sci A", size: 2 },
-        { entry: "Mrs. Bryan", size: 1 },
-        { entry: "kbryan@fakeschools.org", size: 1 },
-        { entry: "", size: 2 },
-        { entry: "Due: Oct 13, 2028", size: 2 },
-        { entry: "Priority: High", size: 2 },
+        { entry: "AP Comp Sci A", size: 2, href: "" },
+        { entry: "Mrs. Bryan", size: 1, href: "" },
+        { entry: "kbryan@fakeschools.org", size: 1, href: "" },
+        { entry: "Due: Oct 13, 2028", size: 2, href: "" },
+        { entry: "Priority: High", size: 2, href: "" },
     ]}
     list_entries={[
         { title: "Read Menu", href: "" },
         { title: "Email Teacher", href: "" },
         { title: "Print", href: "" },
         { title: "Scan and Upload", href: "" },
-        { title: "Return to Main", href: "/main/" },
+        { title: "Return to Main", href: "/" },
         { title: "Help", href: "" },
     ]}
 />

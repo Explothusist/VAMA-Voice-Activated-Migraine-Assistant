@@ -15,9 +15,9 @@
 
     ]}
     list_entries={[
-        { title: "Username", href: "/main/" },
-        { title: "Password", href: "/main/" },
-        { title: "Remember this Machine", href: "/main/" },
+        { title: "Username", href: "/" },
+        { title: "Password", href: "/" },
+        { title: "Remember this Machine", href: "/" },
     ]}
 />
 

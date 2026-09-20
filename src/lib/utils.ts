@@ -7,4 +7,5 @@ export interface TextLinkButton {
 export interface SubtitleSizedEntry {
     entry: string;
     size: number;
+    href: string;
 };

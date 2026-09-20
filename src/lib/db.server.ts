@@ -56,9 +56,9 @@ export class User {
         return rows.map((a) => User.fromCSV(a));
     }
 
-    static GetByIdQuery = db.prepare<[], UserCSVRow>(User.SQLGet_BaseFields+" WHERE id = ?");
+    static GetByIdQuery = db.prepare<[number], UserCSVRow>(User.SQLGet_BaseFields+" WHERE id = ?");
     static getById(id: number): User {
-        const row: (UserCSVRow | undefined) = User.GetByIdQuery.get();
+        const row: (UserCSVRow | undefined) = User.GetByIdQuery.get(id);
         return row ? User.fromCSV(row) : User.errorCode();
     }
 
@@ -133,9 +133,9 @@ export class Class {
         return rows.map((a) => Class.fromCSV(a));
     }
 
-    static GetByIdQuery = db.prepare<[], ClassCSVRow>(Class.SQLGet_BaseFields+" WHERE id = ?");
+    static GetByIdQuery = db.prepare<[number], ClassCSVRow>(Class.SQLGet_BaseFields+" WHERE id = ?");
     static getById(id: number): Class {
-        const row: (ClassCSVRow | undefined) = Class.GetByIdQuery.get();
+        const row: (ClassCSVRow | undefined) = Class.GetByIdQuery.get(id);
         return row ? Class.fromCSV(row) : Class.errorCode();
     }
 
@@ -198,7 +198,7 @@ export class Assignment {
         this.document_filename = data.document_filename;
         this.class_id = data.class_id;
     }
-    static readonly SQLGet_BaseFields = "SELECT id,active,name,description,due_date,priority,notes,document_filename,class_id FROM Assignment";
+    static readonly SQLGet_BaseFields = "SELECT id,active,name,description,due_date,priority,notes,document_filename,class_id FROM assignment";
 
     static fromCSV(csv_data: AssignmentCSVRow): Assignment {
         let data: AssignmentDataObject = {
@@ -220,9 +220,9 @@ export class Assignment {
         return rows.map((a) => Assignment.fromCSV(a));
     }
 
-    static GetByIdQuery = db.prepare<[], AssignmentCSVRow>(Assignment.SQLGet_BaseFields+" WHERE id = ?");
+    static GetByIdQuery = db.prepare<[number], AssignmentCSVRow>(Assignment.SQLGet_BaseFields+" WHERE id = ?");
     static getById(id: number): Assignment {
-        const row: (AssignmentCSVRow | undefined) = Assignment.GetByIdQuery.get();
+        const row: (AssignmentCSVRow | undefined) = Assignment.GetByIdQuery.get(id);
         return row ? Assignment.fromCSV(row) : Assignment.errorCode();
     }
 

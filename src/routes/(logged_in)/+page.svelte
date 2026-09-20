@@ -15,7 +15,7 @@
 
     ]}
     list_entries={[
-        { title: "Read Menu", href: "/main/" },
+        { title: "Read Menu", href: "/" },
         { title: "List Classes", href: "/classes/" },
         { title: "View Class", href: "/classes/1/" },
         { title: "List Assignments", href: "/assignments/" },
