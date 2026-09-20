@@ -13,7 +13,7 @@ export const actions: Actions = {
 
 	authenticate: async ({ request, cookies, url }: RequestEvent) => {
 
-		throw redirect(303, '/');
+		throw redirect(303, '/main');
 	}
 	
 };
