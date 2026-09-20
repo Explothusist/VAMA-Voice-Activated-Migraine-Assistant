@@ -10,14 +10,15 @@
 </script>
 
 <DarkListScreen
-    title={"Welcome to VAMA"}
+    title={"Settings"}
     subtitles={[
 
     ]}
     list_entries={[
-        { title: "Username", href: "/main/" },
-        { title: "Password", href: "/main/" },
-        { title: "Remember this Machine", href: "/main/" },
+        { title: "Read Menu", href: "" },
+        { title: "Text Brightness", href: "" },
+        { title: "Help", href: "" },
+        { title: "Logout", href: "/login/" },
     ]}
 />
 

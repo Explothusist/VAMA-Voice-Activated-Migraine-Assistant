@@ -45,7 +45,7 @@
             <!-- <button class="button-as-blank-box button-cont list-text">
                 {entry.title}
             </button> -->
-            <a href={entry.href} class="button-cont list-text">
+            <a href={entry.href} class="button-cont list-text" target="_self">
                 {entry.title}
             </a>
         </flex-cont>

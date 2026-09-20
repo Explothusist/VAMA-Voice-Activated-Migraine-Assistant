@@ -15,13 +15,13 @@
 
     ]}
     list_entries={[
-        { title: "Read Menu", href: "" },
+        { title: "Read Menu", href: "/main/" },
         { title: "List Classes", href: "/classes/" },
         { title: "View Class", href: "/classes/1/" },
         { title: "List Assignments", href: "/assignments/" },
         { title: "View Assignment", href: "/assignments/1/" },
-        { title: "Settings", href: "" },
-        { title: "Help", href: "" },
+        { title: "Settings", href: "/settings/" },
+        { title: "Help", href: "/main?help=true" },
         { title: "Logout", href: "/login/" },
     ]}
 />
