@@ -2,12 +2,20 @@
 <script lang="ts">
     import DarkListScreen from '$lib/components/DarkListScreen.svelte';
     import { toReadableFullDateString, type SubtitleSizedEntry } from '$lib/utils.js';
+    import { onMount } from 'svelte';
     
     let {
         data
     } = $props();
 
     let assignments_parsed: SubtitleSizedEntry[] = $derived(data.all_assignments.map((a) => { return { entry: a.name+" (Due "+toReadableFullDateString(a.due_date)+")", size: 2, href: "/assignments/"+a.id+"/" }; }));
+
+
+    onMount(() => {
+        if (data.help) {
+            
+        }
+    });
 
 </script>
 

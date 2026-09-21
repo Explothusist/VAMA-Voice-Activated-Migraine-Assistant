@@ -1,10 +1,20 @@
 <svelte:options runes={true} />
 <script lang="ts">
+    import { goto } from '$app/navigation';
     import DarkListScreen from '$lib/components/DarkListScreen.svelte';
+    import { onMount } from 'svelte';
     
     let {
         data
     } = $props();
+
+    onMount(() => {
+        if (data.email) {
+            goto("mailto:"+data.class_data.teacher_email);
+        }else if (data.help) {
+
+        }
+    });
 
 </script>
 

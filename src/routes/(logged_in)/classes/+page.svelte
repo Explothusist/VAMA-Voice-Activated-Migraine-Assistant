@@ -2,12 +2,19 @@
 <script lang="ts">
     import DarkListScreen from '$lib/components/DarkListScreen.svelte';
     import type { SubtitleSizedEntry } from '$lib/utils.js';
+    import { onMount } from 'svelte';
     
     let {
         data
     } = $props();
 
     let classes_parsed: SubtitleSizedEntry[] = $derived(data.all_classes.map((a) => { return { entry: a.name, size: 2, href: "/classes/"+a.id+"/" }; }));
+
+    onMount(() => {
+        if (data.help) {
+
+        }
+    });
 
 </script>
 
