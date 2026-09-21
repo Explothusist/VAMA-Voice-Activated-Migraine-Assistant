@@ -23,7 +23,7 @@
             );
         }else {
             textToSpeech(
-                "Assignment "+data.assignment_data.name+". The Assignment is for the class "+data.class_data.name+". The teacher is "+data.class_data.teacher_name+". The assignment is due "+toReadableFullDateString(data.assignment_data.due_date)+". The priority is "+data.assignment_data.priority+". The teacher has provided the following notes: "+data.assignment_data.notes+". The options are: Read Menu, Email Teacher, List Assignments, View Assignment, Return to Main, Help."
+                "Assignment "+data.assignment_data.name+". The Assignment is for the class "+data.class_data.name+". The teacher is "+data.class_data.teacher_name+". The assignment is due "+toReadableFullDateString(data.assignment_data.due_date)+". The priority is "+data.assignment_data.priority+". The teacher has provided the following notes: "+data.assignment_data.notes+". The options are: Read Menu, Email Teacher, Print, Scan and Upload, Return to Main, Help."
             );
         }
         listenForIdentifiers([

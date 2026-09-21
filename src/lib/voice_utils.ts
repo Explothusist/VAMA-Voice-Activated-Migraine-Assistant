@@ -165,7 +165,7 @@ export function textToSpeech(text: string) {
     const speech = new SpeechSynthesisUtterance(text);
 
     speech.lang = 'en-US';
-    speech.rate = 1;
+    speech.rate = 1.5;
     speech.pitch = 1;
     speech.volume = 1;
 

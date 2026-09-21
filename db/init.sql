@@ -40,7 +40,7 @@ CREATE TABLE assignment(
 
 INSERT INTO assignment VALUES(0, TRUE, 'Shell Method HW', '', 1790053140000, 'High', '', '', 0);
 INSERT INTO assignment VALUES(1, TRUE, 'U-Substitution Quiz', '', 1790114400000, 'Low', 'Finish at leisure', '', 0);
-INSERT INTO assignment VALUES(2, TRUE, 'Stoichiometry Practice', '', 1790139540000, 'Inescapable', 'Worth 20% of final grade', '', 1);
-INSERT INTO assignment VALUES(3, TRUE, 'Tarrifs Reading', '', 1790139540000, 'Unavoidable', 'Explains 10.1-10.3', '', 3);
+INSERT INTO assignment VALUES(2, TRUE, 'Stoichiometry Practice', '', 1790139540000, 'Medium', 'Worth 20% of final grade', '', 1);
+INSERT INTO assignment VALUES(3, TRUE, 'Tariffs Reading', '', 1790139540000, 'Low', 'Explains 10.1-10.3', '', 3);
 
 COMMIT;

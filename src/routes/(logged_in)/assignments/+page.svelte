@@ -19,19 +19,15 @@
             );
         }else {
             textToSpeech(
-                "Assignment List. The Assignments are: "+assignments_parsed.map((a) => a.entry).join(", ")+" The options are: Read Menu, List Classes, View Classes, List Assignments, View Assignment, Settings, Help, Logout."
+                "Assignment List. The Assignments are: "+data.all_assignments.map((a) => a.name).join(", ")+". The options are: Read Menu, View Assignment, Return to Main, Help."
             );
         }
         listenForIdentifiers([
-            { identifier: "Read Menu", href: "/" },
-            { identifier: "List Classes", href: "/classes/" },
-            { identifier: "View Class", href: "/classes/1/" },
-            { identifier: "List Assignments", href: "/assignments/" },
-            { identifier: "View Assignment", href: "/assignments/1/" },
-            { identifier: "Settings", href: "/settings/" },
-            { identifier: "Help", href: "/main?help=1" },
-            { identifier: "Logout", href: "/login/" },
-            ...assignments_parsed.map((a) => { return { identifier: a.entry, href: a.href }; }),
+            { identifier: "Read Menu", href: "/assignments/" },
+            { identifier: "View Assignment", href: "/assignments/0/" },
+            { identifier: "Return to Main", href: "/" },
+            { identifier: "Help", href: "/assignments?help=1" },
+            ...data.all_assignments.map((a) => { return { identifier: a.name, href: "/assignments/"+a.id+"/" }; }),
         ]);
     });
 
