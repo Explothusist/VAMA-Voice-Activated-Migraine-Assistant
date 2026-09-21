@@ -15,10 +15,10 @@
 
     ]}
     list_entries={[
-        { title: "Read Menu", href: "" },
-        { title: "Text Brightness", href: "" },
-        { title: "Help", href: "" },
-        { title: "Logout", href: "/login/" },
+        { title: "Read Menu", href: "/settings/" },
+        { title: "Text Brightness", href: "/settings?change_brightness=1" },
+        { title: "Help", href: "/settings?help=1" },
+        { title: "Return to Main", href: "/" },
     ]}
 />
 

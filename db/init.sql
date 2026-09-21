@@ -38,9 +38,9 @@ CREATE TABLE assignment(
     class_id INTEGER
 );
 
-INSERT INTO assignment VALUES(0, TRUE, 'Excessive Expostulation', 'Type an essay in a Word document', 0, 'High', '', '', 0);
-INSERT INTO assignment VALUES(1, TRUE, 'Incentive Exposition', 'Bullet point outline on paper', 0, 'Low', 'Finish at leisure', '', 0);
-INSERT INTO assignment VALUES(2, TRUE, 'Expensive Exfoliation', 'Multiple choice quiz', 0, 'Inescapable', 'Worth 20% of final grade', '', 1);
-INSERT INTO assignment VALUES(3, TRUE, 'Intensive Explanation', 'Lecture recording', 0, 'Unavoidable', 'Explains 10.1-10.3', '', 3);
+INSERT INTO assignment VALUES(0, TRUE, 'Excessive Expostulation', 'Type an essay in a Word document', 1790053140000, 'High', '', '', 0);
+INSERT INTO assignment VALUES(1, TRUE, 'Incentive Exposition', 'Bullet point outline on paper', 1790114400000, 'Low', 'Finish at leisure', '', 0);
+INSERT INTO assignment VALUES(2, TRUE, 'Expensive Exfoliation', 'Multiple choice quiz', 1790139540000, 'Inescapable', 'Worth 20% of final grade', '', 1);
+INSERT INTO assignment VALUES(3, TRUE, 'Intensive Explanation', 'Lecture recording', 1790139540000, 'Unavoidable', 'Explains 10.1-10.3', '', 3);
 
 COMMIT;
