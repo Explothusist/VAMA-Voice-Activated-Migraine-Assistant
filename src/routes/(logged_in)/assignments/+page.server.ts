@@ -7,8 +7,15 @@ export function load({ url, cookies }: RequestEvent) {
 	
 	const all_assignments: JSONAssignment[] = Assignment.getAll().map((a) => a.toJSON());
 
+    const help = (Number(url.searchParams.get("help") ?? "0") === 1);
+    const filter_class = Number(url.searchParams.get("filter_class") ?? "-1");
+	
+	const all_assignments: JSONAssignment[] = Assignment.getAll().map((a) => a.toJSON());
+
 	return {
-		all_assignments: all_assignments
+		all_assignments: all_assignments,
+		help: help,
+		filter_class: filter_class
 	};
 }
 

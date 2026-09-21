@@ -1,11 +1,17 @@
 <svelte:options runes={true} />
 <script lang="ts">
     import DarkListScreen from '$lib/components/DarkListScreen.svelte';
-
+    import { onMount } from 'svelte';
     
     let {
-        form
+        data
     } = $props();
+
+    onMount(() => {
+        if (data.help) {
+
+        }
+    });
 
 </script>
 
