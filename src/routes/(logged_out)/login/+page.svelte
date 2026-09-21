@@ -24,6 +24,7 @@
         { title: "Username", href: "/" },
         { title: "Password", href: "/" },
         { title: "Remember this Machine", href: "/" },
+        { title: "Help", href: "/login?help=1" },
     ]}
 />
 
