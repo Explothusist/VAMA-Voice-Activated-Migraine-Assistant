@@ -21,9 +21,9 @@
         --accent0: #000000;
         --accent1: #595959;
 
-        --font-size1: 22px;
-        --font-size2: 30px;
-        --font-size3: 42px;
+        --font-size1: 20px;
+        --font-size2: 26px;
+        --font-size3: 38px;
     }
 
     :global(html, body) {

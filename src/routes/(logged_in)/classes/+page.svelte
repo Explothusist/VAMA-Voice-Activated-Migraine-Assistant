@@ -15,10 +15,10 @@
     title={"Class List"}
     subtitles={classes_parsed}
     list_entries={[
-        { title: "Read Menu", href: "" },
+        { title: "Read Menu", href: "/classes/" },
         { title: "View Class", href: "/classes/1/" },
         { title: "Return to Main", href: "/" },
-        { title: "Help", href: "" },
+        { title: "Help", href: "/classes?help=1" },
     ]}
 />
 

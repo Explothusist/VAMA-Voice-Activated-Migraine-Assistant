@@ -28,11 +28,11 @@
         <flex-cont>
             <text-cont class:subtitle-text-2={entry.size === 2} class:subtitle-text-1={entry.size === 1}>
                 {#if entry.href !== ""}
-                    <a href={entry.href} class="button-cont list-text subtitle-inner" target="_self">
+                    <a href={entry.href} class="button-cont subtitle-inner" target="_self">
                         {entry.entry}
                     </a>
                 {:else}
-                    <not-a class="button-cont list-text subtitle-inner">
+                    <not-a class="button-cont subtitle-inner">
                         {entry.entry}
                     </not-a>
                 {/if}
@@ -110,9 +110,9 @@
     .button-cont {
         display: block;
         width: 100%;
-        font-size: var(--font-size3);
+        /* font-size: var(--font-size3); */
         color: var(--accent1);
-        margin: 32px;
+        margin: 26px;
         text-align: center;
     }
     .title-text {

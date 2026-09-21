@@ -21,7 +21,7 @@
         { title: "List Assignments", href: "/assignments/" },
         { title: "View Assignment", href: "/assignments/1/" },
         { title: "Settings", href: "/settings/" },
-        { title: "Help", href: "/main?help=true" },
+        { title: "Help", href: "/main?help=1" },
         { title: "Logout", href: "/login/" },
     ]}
 />
