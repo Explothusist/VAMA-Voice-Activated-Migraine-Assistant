@@ -10,8 +10,8 @@ export interface SubtitleSizedEntry {
     href: string;
 };
 
-export interface Pages {
-    pageString: string;
+export interface SpeechPatternLink {
+    identifier: string;
     href: string;
 }
 
