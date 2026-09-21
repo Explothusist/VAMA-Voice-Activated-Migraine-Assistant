@@ -4,6 +4,8 @@ import { type Actions, type RequestEvent } from '@sveltejs/kit';
 
 export function load({ url, cookies }: RequestEvent) {
 	const hack = url.pathname; // So it runs
+	
+	const all_assignments: JSONAssignment[] = Assignment.getAll().map((a) => a.toJSON());
 
     const help = (Number(url.searchParams.get("help") ?? "0") === 1);
     const filter_class = Number(url.searchParams.get("filter_class") ?? "-1");

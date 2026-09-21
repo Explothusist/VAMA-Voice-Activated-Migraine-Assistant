@@ -1,3 +1,5 @@
+import type { Pages } from "./utils.ts"
+
 interface SpeechRecognitionConstructor {
   new (): SpeechRecognition;
 }
@@ -53,22 +55,21 @@ let recognition: SpeechRecognition;
 }
 */
 function startListening() {
-  if (!recognition) {
-    console.error(
-      "Speech recognition is not supported in this browser."
-    );
-    return;
-  }
-  recognition.start();
-}
-
-function goToPage(page: string) {
-    recognition = new SpeechRecognitionAPI();
+     recognition = new SpeechRecognitionAPI();
 
     recognition.continuous = false;
     recognition.interimResults = false;
     recognition.lang = "en-US";
+    if (!recognition) {
+        console.error(
+            "Speech recognition is not supported in this browser."
+        );
+        return;
+  }
+  recognition.start();
+}
 
+function goToPage(page: Pages) {
     startListening()
 
     recognition.onresult = (event) => {
@@ -78,14 +79,45 @@ function goToPage(page: string) {
 
     console.log("Heard:", transcript);
 
-    if (transcript.includes(open )) {
-      window.location.href = `/${page}`;
-    } else if (transcript.includes("open home")) {
-      window.location.href = "/";
+    if (transcript.includes(page.pageString)) {
+      window.location.href = page.href;
     }
   };
 
   recognition.onerror = (event) => {
     console.error("Speech recognition error:", event);
   };
+}
+
+function readPage() {
+    const text = document.body.innerText;
+
+    if (!text.trim()) {
+        console.log("There is no text to read.");
+        return;
+    }
+
+    window.speechSynthesis.cancel();
+
+    const speech = new SpeechSynthesisUtterance(text);
+
+    speech.lang = 'en-US';
+    speech.rate = 1;
+    speech.pitch = 1;
+    speech.volume = 1;
+
+    window.speechSynthesis.speak(speech);
+}
+
+function tts(text: string) {
+    window.speechSynthesis.cancel();
+
+    const speech = new SpeechSynthesisUtterance(text);
+
+    speech.lang = 'en-US';
+    speech.rate = 1;
+    speech.pitch = 1;
+    speech.volume = 1;
+
+    window.speechSynthesis.speak(speech);
 }

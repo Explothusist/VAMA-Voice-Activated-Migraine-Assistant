@@ -10,6 +10,11 @@ export interface SubtitleSizedEntry {
     href: string;
 };
 
+export interface Pages {
+    pageString: string;
+    href: string;
+}
+
 // HH:MM:SS Mon DD YYYY
 export function toReadableFullDateString(millis: number, timeZone: string = Intl.DateTimeFormat().resolvedOptions().timeZone): string {
     if (!millis) {
