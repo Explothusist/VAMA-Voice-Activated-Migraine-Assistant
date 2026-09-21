@@ -18,7 +18,7 @@
             );
         }else {
             textToSpeech(
-                "Class "+data.class_data.name+". The options are: Read Menu, Email Teacher, List Assignments, View Assignment, Return to Main, Help."
+                "Class "+data.class_data.name+". The teacher is "+data.class_data.teacher_name+", whose email is "+data.class_data.teacher_email+". The options are: Read Menu, Email Teacher, List Assignments, View Assignment, Return to Main, Help."
             );
         }
         listenForIdentifiers([

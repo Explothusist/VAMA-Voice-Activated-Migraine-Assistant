@@ -19,7 +19,7 @@
             );
         }else {
             textToSpeech(
-                "Main Page. The Assignments are: "+assignments_parsed.map((a) => a.entry).join(", ")+" The options are: Read Menu, List Classes, View Classes, List Assignments, View Assignment, Settings, Help, Logout."
+                "Assignment List. The Assignments are: "+assignments_parsed.map((a) => a.entry).join(", ")+" The options are: Read Menu, List Classes, View Classes, List Assignments, View Assignment, Settings, Help, Logout."
             );
         }
         listenForIdentifiers([

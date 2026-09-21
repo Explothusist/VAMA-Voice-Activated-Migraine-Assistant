@@ -3,6 +3,7 @@
     import { goto } from '$app/navigation';
     import DarkListScreen from '$lib/components/DarkListScreen.svelte';
     import { toReadableFullDateString } from '$lib/utils.js';
+    import { listenForIdentifiers, textToSpeech } from '$lib/voice_utils.js';
     import { onMount } from 'svelte';
 
     let {
@@ -17,8 +18,22 @@
         }else if (data.scan) {
 
         }else if (data.help) {
-
+            textToSpeech(
+                "Say Read Menu to repeat the contents of the menu. Say any of the options to navigate to the corresponding menu."
+            );
+        }else {
+            textToSpeech(
+                "Assignment "+data.assignment_data.name+". The Assignment is for the class "+data.class_data.name+". The teacher is "+data.class_data.teacher_name+". The assignment is due "+toReadableFullDateString(data.assignment_data.due_date)+". The priority is "+data.assignment_data.priority+". The teacher has provided the following notes: "+data.assignment_data.notes+". The options are: Read Menu, Email Teacher, List Assignments, View Assignment, Return to Main, Help."
+            );
         }
+        listenForIdentifiers([
+            { identifier: "Read Menu", href: "/assignments/"+data.assignment_data.id+"/" },
+            { identifier: "Email Teacher", href: "/assignments/"+data.assignment_data.id+"?email=1" },
+            { identifier: "Print", href: "/assignments/"+data.assignment_data.id+"?print=1" },
+            { identifier: "Scan and Upload", href: "/assignments/"+data.assignment_data.id+"?scan=1" },
+            { identifier: "Return to Main", href: "/" },
+            { identifier: "Help", href: "/assignments/"+data.assignment_data.id+"?help=1" },
+        ]);
     });
 
 </script>

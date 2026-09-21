@@ -25,7 +25,7 @@
             { identifier: "List Assignments", href: "/assignments/" },
             { identifier: "View Assignment", href: "/assignments/1/" },
             { identifier: "Settings", href: "/settings/" },
-            { identifier: "Help", href: "/main?help=1" },
+            { identifier: "Help", href: "/?help=1" },
             { identifier: "Logout", href: "/login/" },
         ]);
     });
@@ -44,7 +44,7 @@
         { title: "List Assignments", href: "/assignments/" },
         { title: "View Assignment", href: "/assignments/1/" },
         { title: "Settings", href: "/settings/" },
-        { title: "Help", href: "/main?help=1" },
+        { title: "Help", href: "/?help=1" },
         { title: "Logout", href: "/login/" },
     ]}
 />
